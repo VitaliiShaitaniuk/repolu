@@ -50,7 +50,7 @@ export default function Dashboard() {
               <div 
               className={toggleState === 1 ? "tabsP active-tabsP" : "tabsP"}
               onClick={() => toggleTab(1)}
-              >Продажи</div>
+              >Мои товары</div>
               <div 
               className={toggleState === 2 ? "tabsP active-tabsP" : "tabsP"}
               onClick={() => toggleTab(2)}
@@ -63,6 +63,11 @@ export default function Dashboard() {
               className={toggleState === 4 ? "tabsP active-tabsP" : "tabsP"}
               onClick={() => toggleTab(4)}
               >Сообщения</div>
+              <div 
+              className={toggleState === 5 ? "tabsP active-tabsP" : "tabsP"}
+              onClick={() => toggleTab(5)}
+              >Продано</div>
+              
               
             </div>
 
@@ -72,7 +77,7 @@ export default function Dashboard() {
               className={toggleState === 1 ? "contentP active-contentP" : "contentP"}
               >
                 <div className="sails_head">
-                  <h2>Продажи</h2>
+                  <h2>Мои товары</h2>
                   <button>Добавить лот</button>
                   <button>Удалить лот</button>
                 </div>
@@ -142,6 +147,14 @@ export default function Dashboard() {
               <h2>Сообщения</h2>
                 
                 <p>kjblklkjbууауауфцуафуаvkjgvвмфамфымв</p>
+              </div>
+              <div 
+              className={toggleState === 5 ? "contentP active-contentP" : "contentP"}
+              >
+              <h2>Продано</h2>
+                
+                <p>kjblklkjbууауауфцуафуаvkjgvвмфамфымв</p>
+                
               </div>
 
             </div>
