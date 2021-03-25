@@ -3,6 +3,8 @@ import {Link, useHistory} from 'react-router-dom';
 import { Alert } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
 import { Header, Footer } from '../components';
+import  Modal  from './Modal';
+
 
 
 export default function Dashboard() {
@@ -29,6 +31,8 @@ export default function Dashboard() {
   const toggleTab = (index) => {
     setToggleState(index);
   }
+
+  const [modalActive, setModalActive] = useState(true)
 
     return (
         <div>
@@ -78,7 +82,8 @@ export default function Dashboard() {
               >
                 <div className="sails_head">
                   <h2>Мои товары</h2>
-                  <button>Добавить лот</button>
+                  <button className="open_btn">Добавить лот</button>
+                  <Modal active={modalActive} setActive={setModalActive}/>
                   <button>Удалить лот</button>
                 </div>
                 
@@ -159,7 +164,7 @@ export default function Dashboard() {
 
             </div>
 
-            
+          
 
           </div>
           <Footer/>
