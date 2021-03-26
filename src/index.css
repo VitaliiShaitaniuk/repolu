@@ -96,6 +96,7 @@
   height: 40px;
   margin-bottom: 10px;
   justify-content: space-around;
+  
 }
 
 .login_button{
@@ -767,4 +768,13 @@ li{
   margin-right: 30px;
   padding-top: 100px;
   
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
 }

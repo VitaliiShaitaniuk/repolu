@@ -11,12 +11,17 @@ import Home from './components/Home';
 
 
 
+
+
+
 //BrowserRouter as Router, Switch,
 
 
 
 class App extends Component {
   render() {
+
+    
     return (
       
         <div className="wrapper">
@@ -43,7 +48,7 @@ class App extends Component {
           </AuthProvider>
           
         </Router>
-        
+         
           
         
       

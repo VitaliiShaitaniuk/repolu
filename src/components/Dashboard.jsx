@@ -3,9 +3,14 @@ import {Link, useHistory} from 'react-router-dom';
 import { Alert } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
 import { Header, Footer } from '../components';
-import  Modal  from './Modal';
+import Modal from 'react-modal';
 
 
+
+
+
+
+Modal.setAppElement('#root')
 
 export default function Dashboard() {
 
@@ -32,7 +37,7 @@ export default function Dashboard() {
     setToggleState(index);
   }
 
-  const [modalActive, setModalActive] = useState(true)
+  const [modalIsOpen, setModalIsOpen] = useState(false)
 
     return (
         <div>
@@ -81,10 +86,34 @@ export default function Dashboard() {
               className={toggleState === 1 ? "contentP active-contentP" : "contentP"}
               >
                 <div className="sails_head">
+                  
                   <h2>Мои товары</h2>
-                  <button className="open_btn">Добавить лот</button>
-                  <Modal active={modalActive} setActive={setModalActive}/>
+                  <button onClick={() => setModalIsOpen(true)}>Добавить лот</button>
+                  <Modal isOpen={modalIsOpen} 
+                    shouldCloseOnOverlayClick={false} 
+                    onRequestClose={() => setModalIsOpen(false)} 
+                    style={
+                      {
+                        overlay:{
+                          backgroundColor: 'gray'
+                        },
+                        content: {
+                          color: 'orange'
+                        }
+                      }
+                    }>
+                    <h2>Modal title</h2>
+                    <p>modal body</p>
+                    <div>
+                      <button onClick={() => setModalIsOpen(false)}>Close</button>
+                    </div>
+                  </Modal>
                   <button>Удалить лот</button>
+                  
+                  
+                    
+                  
+                  
                 </div>
                 
                 <div className="layer">
@@ -168,6 +197,7 @@ export default function Dashboard() {
 
           </div>
           <Footer/>
+          
         </div>
         
     )
