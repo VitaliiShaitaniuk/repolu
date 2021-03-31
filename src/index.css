@@ -778,3 +778,20 @@ li{
   top: 0;
   left: 0;
 }
+.quadro_add_foto{
+  width: 150px;
+  height: 150px;
+  border: 1px solid red;
+  margin: 5px;
+}
+.adding_form{
+  display: flex;
+  flex-direction: column;
+}
+.balance_board{
+  text-align: center;
+  width: 90%;
+  min-height: 100px;
+  border: 1px solid red;
+
+}

@@ -98,12 +98,64 @@ export default function Dashboard() {
                           backgroundColor: 'gray'
                         },
                         content: {
-                          color: 'orange'
+                          color: 'black'
                         }
                       }
                     }>
-                    <h2>Modal title</h2>
+                    <h2>Lucrolote</h2>
                     <p>modal body</p>
+                    <form className="adding_form">
+                      <input type="text" placeholder="Заголовок"></input>
+                      <div className="quadro_add_foto">
+
+                      </div>
+                      <p>Максимальное количество фотографий: 5</p>
+                      <select>
+	                      <option>Выберите категорию</option>
+	                      <option>Авто</option>
+	                      <option>Телефоны</option>
+	                      <option>Ноутбуки</option>
+                        <option>Техника</option>
+                        <option>Спорт</option>
+                        <option>Одежда</option>
+                        <option>Детское</option>
+                        <option>Дом</option>
+                        <option>Продукты</option>
+                        <option>Здоровье</option>
+                        <option>Услуги</option>
+                        <option>Другое</option>
+                      </select>
+                      <textarea>Описание...</textarea>
+                      <p><b>Варианты оплаты</b></p>
+                        <p><input name="dzen" type="radio" value="nedzen"/> Предоплата на карту/счет</p>
+                        <p><input name="dzen" type="radio" value="dzen"/> Наложеный платеж</p>
+                        <p><input name="dzen" type="radio" value="pdzen"/> Оплата наличными</p>
+                      <p><b>Возврат и обмен</b></p>
+                        <p><input name="dzen" type="radio" value="nedzen"/> Возврат и обмен в течении 14 дней</p>
+                        <p><input name="dzen" type="radio" value="dzen"/> Обмен в течении 14 дней</p>
+                        <p><input name="dzen" type="radio" value="pdzen"/> Возврата и обмена нет</p> 
+                      <h4>Продолжительность аукциона</h4>
+                      <select>
+	                      <option>2 часа</option>
+	                      <option>24 часа</option>
+	                      <option>2 дня</option>
+	                      <option>3 дня</option>
+                        <option>4 дня</option>
+                        <option>5 дней</option>
+                        <option>6 дней</option>
+                        <option>7 дней</option>
+                      </select>
+                      <h4>Стартовая цена</h4>	
+                      <input type="text" placeholder="10"/>
+                      <div className="balance_board">
+                        <p>Стоимость выставления - 1грн.</p>
+                        <p>На вашем счету: 0грн.</p>
+                        <p>Пополнить счет</p>
+                      </div>
+                      <p>Внимание - вы не сможете изменить или удалить запись с аукциона.<br/>
+                        Если вы хотите что-то изменить - отредактируйте текст сейчас, до создания аукциона.</p>
+                      <input type="submit" value="Разместить за 1грн +9% от продажи" />
+                    </form>
                     <div>
                       <button onClick={() => setModalIsOpen(false)}>Close</button>
                     </div>
